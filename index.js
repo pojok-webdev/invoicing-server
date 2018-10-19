@@ -1,11 +1,10 @@
+
 var express = require('express'),
 app = express(),
 path = require('path'),
 con = require('./js/connections.js'),
 query = require('./js/queries.js'),
-help = require('./js/help.js'),
 bodyParser = require('body-parser'),
-mailer = require('./js/mailer.js'),
 jwt = require('jsonwebtoken'),
 secretOrKey = 'padinet',
 config = require("./js/configs.js"),
@@ -33,4 +32,4 @@ app.get('/getclient',(req,res) => {
         res.send(result);
     })
 })
-app.listen(process.env.PORT || 2018);
+app.listen(process.env.PORT || 2118);
