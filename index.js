@@ -33,4 +33,11 @@ app.get('/getclient',(req,res) => {
         res.send(result);
     })
 })
+app.get('/getservices',(req,res) => {
+    console.log("Query",query.getclient());
+    con.getdata(query.getServices(),result => {
+        console.log("Result",result);
+        res.send(result);
+    })
+})
 app.listen(process.env.PORT || 2018);
